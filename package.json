@@ -1,0 +1,27 @@
+{
+  "name": "stop-loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "node ./node_modules/typescript/lib/tsc && node build/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/adm-zip": "^0.4.31",
+    "@types/csv-parse": "^1.1.9",
+    "@types/node": "^8.0.26",
+    "@types/request": "^2.0.3",
+    "tslint": "^5.7.0",
+    "tslint-language-service": "^0.9.6",
+    "typescript": "^2.5.2"
+  },
+  "dependencies": {
+    "adm-zip": "^0.4.7",
+    "aws-sdk": "^2.110.0",
+    "csv-parse": "^1.2.1",
+    "request": "^2.81.0"
+  }
+}
