@@ -48,12 +48,17 @@ export function downloadJsonFile(
   });
 }
 
-export function gzipAndUpload(version: number, stops: Array<StopType>, keyName: string) {
-  const data = version + '\n' + JSON.stringify(stops.sort());
-  gzip(data, function (error, gzipped) {
-    if (error) throw error;
-    uploadToS3(gzipped, keyName);
-  });
+export function gzipAndUpload(version: number, stops: Array<StopType>, keyName: string, minAmount: number) {
+
+  if (stops.length < minAmount) {
+    console.log(`Too few stops (${stops.length}) for ${keyName}. Min amount was ${minAmount}.`);
+  } else {
+    const data = version + '\n' + JSON.stringify(stops.sort());
+    gzip(data, function (error, gzipped) {
+      if (error) throw error;
+      uploadToS3(gzipped, keyName);
+    });
+  }
 }
 
 export function parseGtfsStopsData(

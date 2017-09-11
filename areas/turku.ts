@@ -29,6 +29,6 @@ export function processTurku() {
         ]);
       }
 
-      gzipAndUpload(version, result, 'StopsTurku_jhx45zsb');
+      gzipAndUpload(version, result, 'StopsTurku_jhx45zsb', 2500);
     });
 }

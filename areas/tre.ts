@@ -7,7 +7,7 @@ export function processTre() {
     'stops.txt',
     (data: string) => {
       parseGtfsStopsData(data, {id: 0, title: 2, lat: 3, lng: 4}, (version, stops) => {
-        gzipAndUpload(version, stops, 'StopsTre_jhx45zsb');
+        gzipAndUpload(version, stops, 'StopsTre_jhx45zsb', 2500);
       });
     });
 }

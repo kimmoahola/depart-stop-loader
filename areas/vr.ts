@@ -19,11 +19,11 @@ export function processVr() {
     (json: Array<StationType>) => {
 
       const version = 2;
-      const result: Array<StopType> = [];
+      const stops: Array<StopType> = [];
 
       json.filter(station => station.type === 'Station' || station.type === 'Service station')
           .forEach(station => {
-        result.push([
+        stops.push([
           station.name,
           station.abbreviation,
           Math.round(station.location.lat * 1e6),
@@ -31,6 +31,6 @@ export function processVr() {
         ]);
       });
 
-      gzipAndUpload(version, result, 'StopsVr_jhx45zsb');
+      gzipAndUpload(version, stops, 'StopsVr_jhx45zsb', 200);
     });
 }
