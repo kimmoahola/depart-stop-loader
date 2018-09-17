@@ -1,4 +1,6 @@
-/config.json
 /build
-/.vscode
-/node_modules
+.vscode
+node_modules
+.serverless
+.webpack
+.idea

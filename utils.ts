@@ -86,8 +86,6 @@ export function parseGtfsStopsData(
 }
 
 function uploadToS3(binaryData: Buffer, keyName: string) {
-  AWS.config.loadFromPath('./config.json');
-
   const s3 = new AWS.S3();
 
   var params = {

@@ -1,1 +1,0 @@
-46 4 * * thu pi cd /home/pi/depart/depart-stop-loader/ && /home/pi/.nvm/versions/node/v8.4.0/bin/node build/index.js
