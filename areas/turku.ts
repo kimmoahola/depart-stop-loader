@@ -13,7 +13,7 @@ interface StationType {
 
 export function processTurku() {
   downloadJsonFile(
-    'http://data.foli.fi/gtfs/v0/stops',
+    'https://data.foli.fi/gtfs/v0/stops',
     (json: StopsType) => {
 
       const version = 2;
